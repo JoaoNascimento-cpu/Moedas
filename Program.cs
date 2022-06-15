@@ -11,12 +11,12 @@ namespace TiposMoedas
 
             Console.Clear();
 
-            decimal valor = 1123.55m;
+            decimal valor = 1123.2m;
 
-            Console.WriteLine(valor.ToString("G",CultureInfo.CreateSpecificCulture("pt-BR")));
-            Console.WriteLine(valor.ToString("N",CultureInfo.CreateSpecificCulture("pt-BR")));
-            Console.WriteLine(valor.ToString("F",CultureInfo.CreateSpecificCulture("pt-BR")));
-            Console.WriteLine(valor.ToString("C",CultureInfo.CreateSpecificCulture("pt-BR")));
+            Console.WriteLine(valor.ToString("p",CultureInfo.CreateSpecificCulture("pt-BR")));//porcentagem
+            Console.WriteLine(valor.ToString("N",CultureInfo.CreateSpecificCulture("pt-BR")));//formata para moeda só que sem a sigla 
+            Console.WriteLine(valor.ToString("f",CultureInfo.CreateSpecificCulture("pt-BR")));//adiciona casa decimal, aumentando a precisão
+            Console.WriteLine(valor.ToString("C",CultureInfo.CreateSpecificCulture("pt-BR")));//padrão moeda
         }
     }
 }

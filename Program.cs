@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace TiposMoedas
 {
@@ -10,9 +11,14 @@ namespace TiposMoedas
 
             Console.Clear();
 
-            decimal valor = 10.25m;
+            decimal valor = 1123.55m;
 
-            Console.WriteLine(valor);
+            Console.WriteLine(valor.ToString(
+                "N",
+                CultureInfo.CreateSpecificCulture("pt-BR")
+                )
+
+            );
         }
     }
 }
